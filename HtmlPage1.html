@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bubble Burst Game </title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="imges/2.png" type="logo">
+</head>
+<body onload="Init()">
+    <img src="imges/gjes_ic91_201224.jpg"  id="ImageFix">
+    <h1>Bubble Burst Game</h1>
+    <br >
+    <div id="playerInfo">
+        <span id="playerNameDisplay"> playerName:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="pointsDisplay">Points: 0</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="level">gameLevel</span>&nbsp;
+    </div>
+
+    <section >
+        <button id="over" onclick="gotoAlufim()">עבור לטבלת האלופים</button>
+    </section>
+    <!-- <section >
+        <button id="stop" onclick="stopPlaying()">▶️</button>
+    </section> -->
+    
+   <div id="gameOver">
+        <p>do you want to play again?</p>
+        <div id="IngameOver">
+            <p id="y" onclick="Init()">YES</p>
+            <p id="n"  onclick="gotoAlufim()">NO</p>
+        </div>
+      
+   </div>
+    <script>
+        var playerName = localStorage.getItem('PlayerName');
+        var selectedImage = localStorage.getItem('selectedImage');
+
+        document.getElementById('playerNameDisplay').textContent = "Player: " + playerName;
+        document.getElementById('gameArea').innerHTML = "<img src='" + selectedImage + "' alt='Selected Image'>";
+
+    </script>
+    <script src="JavaScript.js"></script>
+ </body>
+</html>
