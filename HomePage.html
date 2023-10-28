@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="imges/2.png" type="logo">
+    <title>Bubble Burst Game</title>
+    <style></style>
+</head>
+<body onload="nameList()" id="homeBody" >
+    <img src="imges/19040.jpg"  id="ImageFix" style="opacity: 100%;">
+    <section id="sec">
+        <h1>ברוכים הבאים למשחק פיצוץ בועות</h1>
+        <div id="instructions">
+          <p>                 :הוראות המשחק      <br>
+             כדי להתחיל לשחק  עליך למלאות פרטי משחק ,לחץ על כפתור מילוי פרטים-<br>
+                בועות יופיעו באופן אקראי על המסך-<br>
+                הזז את העכבר כדי למקם את הסמן מעל בועה-<br>
+                לחץ על בועה כדי לפוצץ אותה-<br>
+                אתה מרוויח נקודות עבור כל בועה שאתה מפיץ בהצלחה-<br>
+                המשחק מסתיים כאשר מספר מסוים של בועות מתפוצץ-<br>
+                אתה יכול לעקוב אחר הציון שלך בחלק העליון של המסך-<br>
+                "כדי לשחק שוב, לחץ על כפתור "טבלת אלופים-<br>
+                
+                            !שחק ממשחק הבועה ותיהנה<br>
+            </p>
+    
+        </div>
+        <button id="start" onclick="instructions()"  >הוראות משחק</button>
+        <button id="start" onclick="start()">מילוי פרטים</button>
+    </section>
+    
+    <div id="startForm">
+        <h1>ברוכים הבאים למשחק פיצוץ בועות</h1>
+        <p>:אנא הכנס את פרטיך</p>
+        <select id="selectName" onclick="HidaText()">
+            <option> בחר שחקן</option>
+        </select>&nbsp;&nbsp;&nbsp;
+        <button onclick="showText()">אחר</button>
+        <input id="PlayerName" type="text" placeholder="שחקן 1" /> <br />
+        <br>
+        <br>
+        בחר מספר אלמנטים למשחק 50-200
+        <br>
+        <input type="number" id="ElementCount" min="50" max="200" value="50" placeholder="Enter a number between 50 and 200">
+        <br>
+        -בחר את רמת המשחק בה תרצה לשחק
+        <br>
+        <select id="GameLevel">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+    
+        </select>
+        <br>
+        
+        <p>:בחר תמונה עבור האלמנטים</p>
+        <div id="imageOptions">
+            <div class="image-option">
+                <img src="imges/1.png" alt="Image 1" />
+    
+            </div>
+            <div class="image-option">
+                <img src="imges/2.png" alt="Image 2" />
+            </div>
+            <div class="image-option">
+                <img src="imges/3.png" alt="Image 3" />
+            </div>
+            <div class="image-option">
+                <img src="imges/4.png" alt="Image 4" />
+            </div>
+            <div class="image-option">
+                <img src="imges/5.png" alt="Image 5" />
+            </div>
+        </div>
+      
+        <p> בחירת תמונה אקראית</p>
+        <input type="submit" value="אקראי" name="pic" checked="checked" onchange="RandGame()" />
+        <div id="ParentImage"></div>
+        <br>
+        <button class="start-button" onclick="startGame()">Start Game</button>
+    </div>
+    
+    <script src="JavaScript.js"></script>
+
+</body>
+</html>
